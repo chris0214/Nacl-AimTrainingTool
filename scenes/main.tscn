@@ -1,0 +1,41 @@
+[gd_scene load_steps=8 format=3]
+
+[ext_resource type="Script" path="res://scripts/main.gd" id="1"]
+[ext_resource type="PackedScene" path="res://scenes/arena/flat_arena.tscn" id="2"]
+[ext_resource type="PackedScene" path="res://scenes/actors/arena_actor.tscn" id="3"]
+[ext_resource type="Script" path="res://scripts/actors/static_target.gd" id="4"]
+[ext_resource type="Script" path="res://scripts/combat/beam_visual.gd" id="5"]
+[ext_resource type="Script" path="res://scripts/ui/trainer_hud.gd" id="6"]
+[ext_resource type="Script" path="res://scripts/debug/playtest_probe.gd" id="7"]
+[ext_resource type="Script" path="res://scripts/combat/weapon_model.gd" id="8"]
+
+[node name="Trainer" type="Node3D"]
+script = ExtResource("1")
+
+[node name="Arena" parent="." instance=ExtResource("2")]
+
+[node name="Player" parent="." instance=ExtResource("3")]
+
+[node name="Target" type="CharacterBody3D" parent="."]
+script = ExtResource("4")
+
+[node name="Camera" type="Camera3D" parent="."]
+current = true
+fov = 75.0
+near = 0.05
+far = 150.0
+
+[node name="Beam" type="Node3D" parent="."]
+script = ExtResource("5")
+
+[node name="BotBeam" type="Node3D" parent="."]
+script = ExtResource("5")
+
+[node name="WeaponModel" type="Node3D" parent="Camera"]
+script = ExtResource("8")
+
+[node name="HUD" type="CanvasLayer" parent="."]
+script = ExtResource("6")
+
+[node name="PlaytestProbe" type="Node" parent="."]
+script = ExtResource("7")

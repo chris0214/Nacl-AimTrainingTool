@@ -1,0 +1,17 @@
+.godot/
+artifacts/
+build/
+release/
+export_templates/
+.env
+.env.*
+!.env.example
+*.tmp
+*.log
+*.exe
+*.pck
+*.zip
+*.import
+.DS_Store
+Thumbs.db
+export_credentials.cfg

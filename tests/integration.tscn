@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://tests/integration.gd" id="1"]
+
+[node name="Integration" type="Node"]
+process_physics_priority = 100
+script = ExtResource("1")

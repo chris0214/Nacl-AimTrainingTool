@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="MovementProfile" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://resources/movement/movement_profile.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+advanced = false
+ground_speed = 8.5
+ground_acceleration = 90.0
+friction = 13.0

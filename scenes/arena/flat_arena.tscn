@@ -1,0 +1,54 @@
+[gd_scene load_steps=8 format=3]
+
+[ext_resource type="Script" path="res://scripts/arena/flat_arena.gd" id="1"]
+[ext_resource type="Shader" path="res://assets/materials/grid.gdshader" id="2"]
+
+[sub_resource type="BoxShape3D" id="FloorShape"]
+size = Vector3(36, 1, 32)
+
+[sub_resource type="ShaderMaterial" id="FloorMaterial"]
+shader = ExtResource("2")
+
+[sub_resource type="BoxMesh" id="FloorMesh"]
+size = Vector3(36, 1, 32)
+material = SubResource("FloorMaterial")
+
+[sub_resource type="Environment" id="Environment"]
+background_mode = 1
+background_color = Color(0.72, 0.77, 0.78, 1)
+ambient_light_source = 3
+ambient_light_color = Color(0.88, 0.93, 1, 1)
+ambient_light_energy = 0.4
+reflected_light_source = 2
+tonemap_mode = 0
+
+[sub_resource type="CameraAttributesPractical" id="CameraAttributes"]
+
+[node name="FlatArena" type="Node3D"]
+script = ExtResource("1")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment")
+camera_attributes = SubResource("CameraAttributes")
+
+[node name="Sun" type="DirectionalLight3D" parent="."]
+rotation_degrees = Vector3(-58, -32, 0)
+light_color = Color(1, 0.96, 0.9, 1)
+light_energy = 0.6
+shadow_enabled = true
+directional_shadow_max_distance = 60.0
+
+[node name="Floor" type="StaticBody3D" parent="."]
+position = Vector3(0, -0.5, 0)
+
+[node name="Collision" type="CollisionShape3D" parent="Floor"]
+shape = SubResource("FloorShape")
+
+[node name="Mesh" type="MeshInstance3D" parent="Floor"]
+mesh = SubResource("FloorMesh")
+
+[node name="PlayerSpawn" type="Marker3D" parent="."]
+position = Vector3(0, 0.02, 7)
+
+[node name="TargetSpawn" type="Marker3D" parent="."]
+position = Vector3(0, 0, -4)

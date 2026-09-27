@@ -1,0 +1,21 @@
+{
+	"version": 1,
+	"name": "白盒练习场",
+	"objects": [
+		{"id":1,"kind":"box","position":[0,-1,0],"size":[36,1,32],"yaw":0,"steps":8,"color":1},
+		{"id":2,"kind":"box","position":[0,0,-16],"size":[36,5,0.6],"yaw":0,"steps":8,"color":0},
+		{"id":3,"kind":"box","position":[0,0,16],"size":[36,5,0.6],"yaw":0,"steps":8,"color":0},
+		{"id":4,"kind":"box","position":[-18,0,0],"size":[0.6,5,32],"yaw":0,"steps":8,"color":0},
+		{"id":5,"kind":"box","position":[18,0,0],"size":[0.6,5,32],"yaw":0,"steps":8,"color":0},
+		{"id":6,"kind":"stairs","position":[-6,0,0],"size":[4,1.6,6.4],"yaw":0,"steps":8,"color":0},
+		{"id":7,"kind":"ramp","position":[6,0,0],"size":[4,1.6,6.4],"yaw":0,"steps":8,"color":0},
+		{"id":8,"kind":"box","position":[0,0,-5.2],"size":[16,1.6,4],"yaw":0,"steps":8,"color":0},
+		{"id":9,"kind":"box","position":[0,0,0],"size":[2,2,3],"yaw":0,"steps":8,"color":0}
+	],
+	"player_spawn": [-6,0.02,7],
+	"player_yaw": -45,
+	"bot_spawn": [6,1.62,-5],
+	"bot_yaw": 135,
+	"bounds": [-17,-15,17,15],
+	"kill_y": -12
+}
