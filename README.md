@@ -2,7 +2,7 @@
 
 基于 Godot 的离线瞄准训练器，包含可调 Bot、连续跟枪、单发积分对练和白盒地图编辑器。
 
-作者：**bilibili：克里斯提亚娜**（chris0214）。使用 AI 编程辅助开发。
+作者：**bilibili：克里斯提亚娜**（chris0214）。使用GPT-Astra助开发。
 源码与项目原创资源按 [MIT](LICENSE) 提供，第三方图标另见[来源与许可](THIRD_PARTY_NOTICES.md)。
 
 ## 功能
